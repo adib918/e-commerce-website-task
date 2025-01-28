@@ -230,6 +230,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: var(--inner-space);
+    gap: 16px;
 }
 .feature{
     border: 1px solid var(--secondry-color);
@@ -238,7 +239,6 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 20px 0px;
-    margin-bottom: 16px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 .feature img{
@@ -249,50 +249,24 @@ body {
     color: var(--primary-color);
     font-weight: 600;
 }
-.feature:nth-child(2n+1){
-    margin-right: 8px;
-}
-.feature:nth-child(2n+2){
-    margin-left: 8px;
+@media (max-width: 345px){
+    .feature img{
+        width: 100px;
+    }
+    .feature h3{
+        font-size: 15px;
+    }
 }
 @media (min-width: 769px){
     .features-container{
         padding: var(--outer-space);
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .feature{
-        margin: 0 16px 0 0;
-        margin-bottom: 16px;
-        margin-left: 0;
-    }
-    .feature:nth-child(2n+2){
-        margin-left: 0;
-    }
-    .feature:nth-child(2n+1){
-        margin-right: 16px;
-    }
-    .feature:nth-child(3n+3){
-        margin-right: 0px;
-    }
-    .feature:nth-child(n+4){
-        margin-bottom: 0px;
-    }
 }
 @media (min-width: 1169px){
     .features-container{
         padding: var(--outer-space);
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    .feature{
-        margin: 0 16px 0 0;
-        margin-bottom: 0;
-        margin-left: 0;
-    }
-    .feature:nth-child(3){
-        margin-right: 16px;
-    }
-    .feature:last-child{
-        margin-right: 0px;
     }
 }
 
@@ -360,16 +334,16 @@ body {
 }
 @media (min-width: 769px){
     .products{
-        padding: 0 calc(var(--outer-space) - 30px) 0 var(--outer-space);
+        padding: 0 var(--outer-space);
     }
     .product{
         cursor: pointer;
-        margin-right: 30px;
-        margin-top: 30px;
+        margin-top: 0px;
     }
     .products-container{
         grid-template-columns: 1fr 1fr;
-        margin-top: 10px;
+        margin-top: 40px;
+        gap: 30px;
     }
     .product:hover{
         box-shadow: 5px 5px 30px var(--secondry-color);
